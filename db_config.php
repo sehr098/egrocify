@@ -1,8 +1,8 @@
 <?php
 
  $hostName = "localhost";
- $userName = "bestamzd_service_app";
- $password = "p7AAclIT(;GM";
+ $userName = "root";
+ $password = "";
  $dbName = "bestamzd_service_app";
  $conn= new mysqli($hostName,$userName,$password,$dbName);
  if($conn){

@@ -8,7 +8,7 @@
     ini_set('display_startup_errors', '1');
     error_reporting(E_ALL);
 
-    if(isset($_POST['signup-request']))  /* This will be the hidden field for all conditions*/
+   if(isset($_POST['signup-request']))  /* This will be the hidden field for all conditions*/
     {
         $uname = $_POST['username'];
         $email = $_POST['email'];       
@@ -22,12 +22,8 @@
             $active = 1;
         }
 
-        $balance = 0;
+        $balance = 0; 
         $package_det = 1;
-        if($inviter_code <>0){
-            $package_id = get_user_det($inviter_code)['package'];
-            $balance = get_single_package($package_id)['referal_reward'];
-        }
 
         // VALIDATIONS ___________________
         if($uname==""){
@@ -59,7 +55,7 @@
         else
         {
             $query = "INSERT INTO users (uname, email, password, role, inviter_code, balance, package, active)
-            VALUES ('".$uname."', '".$email."', '".md5($password)."', '".$role."', '".$inviter_code."', '".$balance."', '".$package."', '".$active."')";
+                    VALUES ('".$uname."', '".$email."', '".md5($password)."', '".$role."', '".$inviter_code."', '".$balance."', '".$package."', '".$active."')";
 
             // var_dump($query);
             $run = mysqli_query($conn, $query);
@@ -74,22 +70,31 @@
                 $send = send_email_verification_mail($custID);
 
                 $query_update = "UPDATE users
-                SET customer_id = '".$custIDPopuplated."'
-                WHERE id = '".$custID."'
-                ";
+                                SET customer_id = '".$custIDPopuplated."'
+                                WHERE id = '".$custID."'
+                                ";
                 $run2 = mysqli_query($conn, $query_update);
+
+              
+                if($inviter_code != 0){
+                    $package_id = get_user_det($inviter_code)['package'];
+                    $referal_reward = get_single_package($package_id)['referal_reward'];
+                    
+                    $query_referral = "INSERT INTO pending_referal_awards (user_id, pending_amount, status)
+                                    VALUES ($custID, $referal_reward, 'pending')";
+                    mysqli_query($conn, $query_referral);
+                }
 
                 // notification_add("New User <b>".$uname."</b> created");
                 
-                $data = array('success' => 1, 'msg' => "Successfully Signed up !", 'custID' => $custID);
+                $data = array('success' => 1, 'msg' => "Successfully Signed up!", 'custID' => $custID);
                 echo json_encode($data);
             }else{
-                $data = array('success' => 0, 'msg' => "Something went Wrong !");
+                $data = array('success' => 0, 'msg' => "Something went Wrong!");
                 echo json_encode($data);
             }
         }
     }
-
     if(isset($_POST['signin-request']))  /* This will be the hidden field for all conditions*/
     {
         $user_email = $_POST['email'];
