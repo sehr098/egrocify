@@ -1,0 +1,8 @@
+.hide_by_position{
+    position: absolute !important;
+    top: -9999px !important;
+    left: -9999px !important;
+}
+
+  .easypaisa_footer_logo{ width: 140px !important; padding: 0px 10px !important; background: white !important; }
+  .alfalah_footer_logo{ width: 140px !important; }

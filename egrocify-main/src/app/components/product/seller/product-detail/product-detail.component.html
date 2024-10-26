@@ -1,0 +1,392 @@
+<div class="row">
+
+  <div class="col-5">
+
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+        <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+        <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="../assets/img/elements/13.jpg" alt="First slide" />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>First slide</h3>
+            <p>Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../assets/img/elements/2.jpg" alt="Second slide" />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Second slide</h3>
+            <p>In numquam omittam sea.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="../assets/img/elements/18.jpg" alt="Third slide" />
+          <div class="carousel-caption d-none d-md-block">
+            <h3>Third slide</h3>
+            <p>Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no.</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="col-7">
+    <div class="card h-100">
+      <div class="card-body">
+        <h1 class="pb-2">Pepsodent Herbal Toothpaste</h1>
+        <p>Italian Cafe</p>
+        <p class="border-bottom">Tonight’s availability</p>
+        <h1 class="pb-2">RS 115</h1>
+        <span class="badge bg-label-secondary rounded-pill">5:30PM</span>
+        <span class="badge bg-label-secondary rounded-pill mx-3">7:00PM</span>
+        <span class="badge bg-label-secondary rounded-pill">7:15PM</span>
+        <p>Italian Cafe</p>
+        <p>Tonight’s availability</p>
+        <div class="mt-4">
+          <a class="card-link" href="javascript:void(0);">Book Now</a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-12 mt-3">
+    <div class="card">
+      <h2 class="card-header mb-0 pb-0">Products List</h2>
+      <div class="card-body">
+        <h3 class="mb-0 pb-2">Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</h3>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3 order-1 order-md-0 mb-3" [routerLink]="['/Product-Detail']">
+    <!-- Customer-detail Card -->
+    <div class="card mb-6">
+      <div class="card-body pt-12">
+        <div class="customer-avatar-section">
+          <div class="d-flex align-items-center flex-column">
+            <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+            <div class="customer-info text-center mb-6">
+              <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI</h5>
+              <span>2%</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI Days</h5>
+              <span>2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+          <ul class="list-unstyled mb-6">
+
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <span class="h6 mb-0">Rs120</span>
+              <span>USA</span>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-center">
+            <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Customer-detail Card -->
+  </div>
+
+  <div class="col-3 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+    <!-- Customer-detail Card -->
+    <div class="card mb-6">
+      <div class="card-body pt-12">
+        <div class="customer-avatar-section">
+          <div class="d-flex align-items-center flex-column">
+            <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+            <div class="customer-info text-center mb-6">
+              <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI</h5>
+              <span>2%</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI Days</h5>
+              <span>2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+          <ul class="list-unstyled mb-6">
+
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <span class="h6 mb-0">Rs120</span>
+              <span>USA</span>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-center">
+            <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Customer-detail Card -->
+  </div>
+
+  <div class="col-3 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+    <!-- Customer-detail Card -->
+    <div class="card mb-6">
+      <div class="card-body pt-12">
+        <div class="customer-avatar-section">
+          <div class="d-flex align-items-center flex-column">
+            <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+            <div class="customer-info text-center mb-6">
+              <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI</h5>
+              <span>2%</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI Days</h5>
+              <span>2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+          <ul class="list-unstyled mb-6">
+
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <span class="h6 mb-0">Rs120</span>
+              <span>USA</span>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-center">
+            <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Customer-detail Card -->
+  </div>
+
+  <div class="col-3 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+    <!-- Customer-detail Card -->
+    <div class="card mb-6">
+      <div class="card-body pt-12">
+        <div class="customer-avatar-section">
+          <div class="d-flex align-items-center flex-column">
+            <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+            <div class="customer-info text-center mb-6">
+              <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI</h5>
+              <span>2%</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI Days</h5>
+              <span>2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+          <ul class="list-unstyled mb-6">
+
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <span class="h6 mb-0">Rs120</span>
+              <span>USA</span>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-center">
+            <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Customer-detail Card -->
+  </div>
+
+  <div class="col-3 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+    <!-- Customer-detail Card -->
+    <div class="card mb-6">
+      <div class="card-body pt-12">
+        <div class="customer-avatar-section">
+          <div class="d-flex align-items-center flex-column">
+            <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+            <div class="customer-info text-center mb-6">
+              <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI</h5>
+              <span>2%</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI Days</h5>
+              <span>2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+          <ul class="list-unstyled mb-6">
+
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <span class="h6 mb-0">Rs120</span>
+              <span>USA</span>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-center">
+            <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Customer-detail Card -->
+  </div>
+
+  <div class="col-3 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+    <!-- Customer-detail Card -->
+    <div class="card mb-6">
+      <div class="card-body pt-12">
+        <div class="customer-avatar-section">
+          <div class="d-flex align-items-center flex-column">
+            <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+            <div class="customer-info text-center mb-6">
+              <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI</h5>
+              <span>2%</span>
+            </div>
+          </div>
+          <div class="d-flex align-items-center gap-4">
+            <div class="avatar">
+              <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+              </div>
+            </div>
+            <div>
+              <h5 class="mb-0">ROI Days</h5>
+              <span>2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-container">
+          <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+          <ul class="list-unstyled mb-6">
+
+            <li class="mb-2 d-flex justify-content-between align-items-center">
+              <span class="h6 mb-0">Rs120</span>
+              <span>USA</span>
+            </li>
+          </ul>
+          <div class="d-flex justify-content-center">
+            <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Customer-detail Card -->
+  </div>
+
+</div>

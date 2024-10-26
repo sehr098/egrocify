@@ -1,0 +1,441 @@
+<div class="d-flex justify-content-between align-items-center w-100 mb-3">
+  <h2 class="card-header mb-0">Products List</h2>
+  <div >
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-9">
+
+    <div class="card mb-3">
+      <div class="card-body">
+        <div class="form-floating form-floating-outline d-flex justify-content-between align-items-center">
+          <input matInput (keyup)="applyFilter($event)" class="form-control w-25 ml-15" placeholder="John Doe">
+          <div class="w-auto d-flex align-items-center">
+            <!-- <mat-paginator #paginator1 [hidePageSize]="false" [showFirstLastButtons]="false" [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []" aria-label="Select page of users"></mat-paginator> -->
+            <mat-paginator #paginator1 class="demo-paginator"
+            (page)="handlePageEvent($event)"
+            [length]="length"
+            [pageSize]="pageSize"
+            [showFirstLastButtons]="false"
+            [pageSizeOptions]="showPageSizeOptions ? pageSizeOptions : []"
+            [hidePageSize]="false"
+            [pageIndex]="pageIndex"
+            aria-label="Select page"></mat-paginator>
+            <div class="d-flex justify-content-between align-items-center">
+              <select id="defaultSelect" class="form-select">
+                <option>Default select</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+    <div class="col-4 order-1 order-md-0 mb-3" [routerLink]="['/Product-Detail']">
+      <!-- Customer-detail Card -->
+      <div class="card mb-6">
+        <div class="card-body pt-12">
+          <div class="customer-avatar-section">
+            <div class="d-flex align-items-center flex-column">
+              <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+              <div class="customer-info text-center mb-6">
+                <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI</h5>
+                <span>2%</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI Days</h5>
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-container">
+            <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+            <ul class="list-unstyled mb-6">
+
+              <li class="mb-2 d-flex justify-content-between align-items-center">
+                <span class="h6 mb-0">Rs120</span>
+                <span>USA</span>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center">
+              <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Customer-detail Card -->
+    </div>
+
+    <div class="col-4 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+      <!-- Customer-detail Card -->
+      <div class="card mb-6">
+        <div class="card-body pt-12">
+          <div class="customer-avatar-section">
+            <div class="d-flex align-items-center flex-column">
+              <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+              <div class="customer-info text-center mb-6">
+                <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI</h5>
+                <span>2%</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI Days</h5>
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-container">
+            <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+            <ul class="list-unstyled mb-6">
+
+              <li class="mb-2 d-flex justify-content-between align-items-center">
+                <span class="h6 mb-0">Rs120</span>
+                <span>USA</span>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center">
+              <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Customer-detail Card -->
+    </div>
+
+    <div class="col-4 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+      <!-- Customer-detail Card -->
+      <div class="card mb-6">
+        <div class="card-body pt-12">
+          <div class="customer-avatar-section">
+            <div class="d-flex align-items-center flex-column">
+              <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+              <div class="customer-info text-center mb-6">
+                <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI</h5>
+                <span>2%</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI Days</h5>
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-container">
+            <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+            <ul class="list-unstyled mb-6">
+
+              <li class="mb-2 d-flex justify-content-between align-items-center">
+                <span class="h6 mb-0">Rs120</span>
+                <span>USA</span>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center">
+              <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Customer-detail Card -->
+    </div>
+
+    <div class="col-4 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+      <!-- Customer-detail Card -->
+      <div class="card mb-6">
+        <div class="card-body pt-12">
+          <div class="customer-avatar-section">
+            <div class="d-flex align-items-center flex-column">
+              <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+              <div class="customer-info text-center mb-6">
+                <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI</h5>
+                <span>2%</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI Days</h5>
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-container">
+            <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+            <ul class="list-unstyled mb-6">
+
+              <li class="mb-2 d-flex justify-content-between align-items-center">
+                <span class="h6 mb-0">Rs120</span>
+                <span>USA</span>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center">
+              <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Customer-detail Card -->
+    </div>
+
+    <div class="col-4 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+      <!-- Customer-detail Card -->
+      <div class="card mb-6">
+        <div class="card-body pt-12">
+          <div class="customer-avatar-section">
+            <div class="d-flex align-items-center flex-column">
+              <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+              <div class="customer-info text-center mb-6">
+                <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI</h5>
+                <span>2%</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI Days</h5>
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-container">
+            <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+            <ul class="list-unstyled mb-6">
+
+              <li class="mb-2 d-flex justify-content-between align-items-center">
+                <span class="h6 mb-0">Rs120</span>
+                <span>USA</span>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center">
+              <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Customer-detail Card -->
+    </div>
+
+    <div class="col-4 order-1 order-md-0 mb-3" [routerLink]="['Product-Detail']">
+      <!-- Customer-detail Card -->
+      <div class="card mb-6">
+        <div class="card-body pt-12">
+          <div class="customer-avatar-section">
+            <div class="d-flex align-items-center flex-column">
+              <img class="img-fluid rounded mb-4" src="../../assets/img/avatars/1.png" height="120" width="220" alt="User avatar">
+              <div class="customer-info text-center mb-6">
+                <h3 class="mb-0">Pepsodent Herbal Toothpaste</h3>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between mb-6 gap-0 gap-md-3 gap-lg-4">
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-shopping-cart-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI</h5>
+                <span>2%</span>
+              </div>
+            </div>
+            <div class="d-flex align-items-center gap-4">
+              <div class="avatar">
+                <div class="avatar-initial rounded bg-label-primary"><i class="ri-money-dollar-circle-line ri-24px"></i>
+                </div>
+              </div>
+              <div>
+                <h5 class="mb-0">ROI Days</h5>
+                <span>2%</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-container">
+            <h5 class="border-bottom text-capitalize pb-4 mt-6 mb-4">Details</h5>
+            <ul class="list-unstyled mb-6">
+
+              <li class="mb-2 d-flex justify-content-between align-items-center">
+                <span class="h6 mb-0">Rs120</span>
+                <span>USA</span>
+              </li>
+            </ul>
+            <div class="d-flex justify-content-center">
+              <a href="javascript:;" class="btn btn-primary w-100 waves-effect waves-light" data-bs-target="#editUser" data-bs-toggle="modal">Edit Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /Customer-detail Card -->
+    </div>
+
+  </div>
+  </div>
+
+  <div class="col-3 invoice-actions">
+    <div class="card">
+      <h2 class="card-header mb-0">Companies</h2>
+      <div class="card-body">
+        <div class="border">
+        <button class="btn btn-primary d-grid w-100  waves-effect waves-light" data-bs-toggle="offcanvas" data-bs-target="#sendInvoiceOffcanvas">
+          <span class="d-flex align-items-center justify-content-center text-nowrap"><i class="ri-send-plane-line ri-16px scaleX-n1-rtl me-1_5"></i>All</span>
+        </button>
+        <button class="btn btn-outline-secondary d-grid w-100 border-none waves-effect">
+          Test Company
+        </button>
+      </div>
+      </div>
+      <div class="d-flex align-items-center pl-20 pr-20">
+        <img src="../../../../../assets/img/avatars/1.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+        <div class="ms-4 d-flex flex-column">
+          <p class="mb-0">Pepsodent Herbal Toothpaste</p>
+          <h5 class="mb-0">ROI 2%</h5>
+        </div>
+      </div>
+      <div class="d-flex align-items-center pl-20 pr-20">
+        <img src="../../../../../assets/img/avatars/1.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+        <div class="ms-4 d-flex flex-column">
+          <p class="mb-0">Pepsodent Herbal Toothpaste</p>
+          <h5 class="mb-0">ROI 2%</h5>
+        </div>
+      </div>
+      <div class="d-flex align-items-center pl-20 pr-20">
+        <img src="../../../../../assets/img/avatars/1.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+        <div class="ms-4 d-flex flex-column">
+          <p class="mb-0">Pepsodent Herbal Toothpaste</p>
+          <h5 class="mb-0">ROI 2%</h5>
+        </div>
+      </div>
+      <div class="d-flex align-items-center pl-20 pr-20">
+        <img src="../../../../../assets/img/avatars/1.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+        <div class="ms-4 d-flex flex-column">
+          <p class="mb-0">Pepsodent Herbal Toothpaste</p>
+          <h5 class="mb-0">ROI 2%</h5>
+        </div>
+      </div>
+      <div class="d-flex align-items-center pl-20 pr-20">
+        <img src="../../../../../assets/img/avatars/1.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+        <div class="ms-4 d-flex flex-column">
+          <p class="mb-0">Pepsodent Herbal Toothpaste</p>
+          <h5 class="mb-0">ROI 2%</h5>
+        </div>
+      </div>
+      <h2 class="card-header mb-0">Latest Products</h2>
+      <div class="d-flex align-items-center pl-20 pr-20">
+        <img src="../../../../../assets/img/avatars/1.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+        <div class="ms-4 d-flex flex-column">
+          <p class="mb-0">Pepsodent Herbal Toothpaste</p>
+          <h5 class="mb-0">ROI 2%</h5>
+        </div>
+      </div>
+      <div class="d-flex align-items-center pl-20 pr-20">
+        <img src="../../../../../assets/img/avatars/1.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+        <div class="ms-4 d-flex flex-column">
+          <p class="mb-0">Pepsodent Herbal Toothpaste</p>
+          <h5 class="mb-0">ROI 2%</h5>
+        </div>
+      </div>
+      <div class="d-flex align-items-center pl-20 pr-20">
+        <img src="../../../../../assets/img/avatars/1.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+        <div class="ms-4 d-flex flex-column">
+          <p class="mb-0">Pepsodent Herbal Toothpaste</p>
+          <h5 class="mb-0">ROI 2%</h5>
+        </div>
+      </div>
+      <div class="d-flex align-items-center pl-20 pr-20">
+        <img src="../../../../../assets/img/avatars/1.png" height="40" alt="message" data-app-light-img="icons/misc/message-light.png" data-app-dark-img="icons/misc/message-dark.png">
+        <div class="ms-4 d-flex flex-column">
+          <p class="mb-0">Pepsodent Herbal Toothpaste</p>
+          <h5 class="mb-0">ROI 2%</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

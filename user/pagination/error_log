@@ -1,0 +1,21 @@
+[09-Jul-2024 14:03:06 UTC] PHP Warning:  require_once(../db_config.php): Failed to open stream: No such file or directory in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php on line 10
+[09-Jul-2024 14:03:06 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../db_config.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php on line 10
+[09-Jul-2024 14:04:07 UTC] PHP Warning:  Undefined array key "location" in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php on line 54
+[09-Jul-2024 14:04:07 UTC] PHP Warning:  Undefined array key "img" in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php on line 55
+[10-Jul-2024 08:59:04 UTC] PHP Parse error:  Unmatched '}' in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php on line 138
+[10-Jul-2024 08:59:29 UTC] PHP Parse error:  Unmatched '}' in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php on line 138
+[10-Jul-2024 09:09:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'package_filter' at line 1 in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php:39
+Stack trace:
+#0 /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php(39): mysqli->query('SELECT COUNT(*)...')
+#1 {main}
+  thrown in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php on line 39
+[10-Jul-2024 09:15:55 UTC] PHP Warning:  Undefined array key "package" in /home/bestamzd/seller.egrocify.com/user/pagination/getDataProduct.php on line 58
+[12-Jul-2024 12:40:53 UTC] PHP Warning:  Undefined global variable $_SESSION in /home/bestamzd/seller.egrocify.com/function.php on line 253
+[12-Jul-2024 12:40:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bestamzd/seller.egrocify.com/function.php on line 253
+[12-Jul-2024 12:40:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bestamzd/seller.egrocify.com/function.php on line 258
+[12-Jul-2024 12:40:53 UTC] PHP Warning:  Undefined global variable $_SESSION in /home/bestamzd/seller.egrocify.com/function.php on line 253
+[12-Jul-2024 12:40:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bestamzd/seller.egrocify.com/function.php on line 253
+[12-Jul-2024 12:40:53 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bestamzd/seller.egrocify.com/function.php on line 258

@@ -1,0 +1,365 @@
+/* Pagelayer Pen editor*/
+.pagelayer-pen{
+-webkit-user-select: text;
+user-select: text;
+}
+
+.pagelayer-pen-holder{
+font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+background-color: #ffffff;
+position: fixed;
+z-index: 9999999999;
+top: 50px;
+left: 0;
+transform: translateY(-100%);
+box-shadow: 0 4px 5px 0 rgb(0 0 0 / 14%), 0 1px 10px 0 rgb(0 0 0 / 12%), 0 2px 4px -1px rgb(0 0 0 / 20%);
+border-radius: 2px;
+line-height: 1;
+padding: 8px 2px;
+font-size: 15px !important;
+display: none;
+}
+
+.pagelayer-pen-toolbar{
+font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+box-sizing: border-box;
+width: max-content;
+max-width: 90vw;
+background: none;
+cursor: pointer;
+}
+
+.pagelayer-pen-toolbar .pagelayer-pen-formats{
+display: inline-block;
+vertical-align: middle;
+padding-right: 7px;
+padding-left: 7px;
+border-left:1px solid #ccc;
+font-weight: 700;
+}
+
+.pagelayer-pen-toolbar button{
+background: none;
+border: none;
+cursor: pointer;
+display: inline-block;
+float: left;
+height: 24px;
+padding: 3px 5px;
+width: 28px;
+font-size: 14px !important;
+font-weight: 700 !important;
+color: #444;
+}
+
+.pagelayer-pen-toolbar button strong{
+font-weight: bold !important;	
+}
+
+.pagelayer-pen-toolbar .pagelayer-pen-formats:first-child {
+padding-left: 0px !important;
+border-left: 0px;
+}
+/* Start Dropdown picker*/
+.pagelayer-pen-picker{
+color: #444;
+display: inline-block;
+float: left;
+height: 24px;
+position: relative;
+vertical-align: middle;
+padding:3px 5px;
+font-size: 14px !important;
+font-weight: 500 !important;
+}
+
+.pagelayer-pen-picker-label {
+cursor: pointer;
+display: inline-block;
+height: 100%;
+position: relative;
+width: 100%;
+}
+
+.pagelayer-pen-picker .pagelayer-pen-picker-label:after {
+content: "\f0dc";
+padding-left: 15px;
+font-weight: 600;
+font-family: "Font Awesome 5 Free";
+font-size: 12px;
+}
+
+.pagelayer-pen-picker.pagelayer-pen-font .pagelayer-pen-picker-label:after,
+.pagelayer-pen-picker.pagelayer-pen-lineheight .pagelayer-pen-picker-label:after,
+.pagelayer-pen-picker.pagelayer-pen-color-picker .pagelayer-pen-picker-label:after {
+content: "";
+padding-left: 0;
+}
+
+.pagelayer-pen-picker-label::before {
+display: inline-block;
+}
+
+.pagelayer-pen-picker-options {
+background-color: #fff;
+display: none;
+min-width: 100%;
+padding: 4px 8px;
+position: absolute;
+white-space: nowrap;
+margin-left: -8px;
+max-height: 200px;
+overflow: auto;
+}
+
+.pagelayer-pen-picker-options::-webkit-scrollbar {
+width:3px;
+}
+
+.pagelayer-pen-picker-options::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+.pagelayer-pen-picker-options::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+.pagelayer-pen-picker-options::-webkit-scrollbar-thumb:hover {
+background: #555;
+cursor:context-menu;
+}
+
+.pagelayer-pen-picker-options .pagelayer-pen-picker-item {
+cursor: pointer;
+display: block;
+padding-bottom: 5px;
+padding-top: 5px;
+}
+
+.pagelayer-pen-picker.pagelayer-pen-expanded .pagelayer-pen-picker-label {
+color: #ccc;
+z-index: 2;
+}
+
+.pagelayer-pen-picker.pagelayer-pen-expanded .pagelayer-pen-picker-label .pagelayer-pen-fill {
+fill: #ccc;
+}
+
+.pagelayer-pen-picker.pagelayer-pen-expanded .pagelayer-pen-picker-label .pagelayer-pen-stroke {
+stroke: #ccc;
+}
+
+.pagelayer-pen-picker.pagelayer-pen-expanded .pagelayer-pen-picker-options {
+display: block;
+margin-top: -1px;
+top: 100%;
+z-index: 1;
+box-shadow: 0px 0px 1px 1px #e4e4e4;
+}
+
+.pagelayer-pen-color-picker .pagelayer-pen-picker-labe{
+padding: 2px 4px;
+}
+
+.pagelayer-pen-icon-picker .pagelayer-pen-picker-options {
+padding: 4px 0px;
+}
+
+.pagelayer-pen-icon-picker .pagelayer-pen-picker-item {
+height: 24px;
+width: 24px;
+padding: 2px 4px;
+}
+
+.pagelayer-pen-color-picker .pagelayer-pen-picker-options {
+padding: 3px 5px;
+width: 152px;
+}
+
+.pagelayer-pen-color-picker .pagelayer-pen-picker-item {
+border: 1px solid transparent;
+float: left;
+height: 16px;
+margin: 2px;
+padding: 0px;
+width: 16px;
+}
+
+.pagelayer-pen-size-picker .pagelayer-pen-picker-label:before,
+.pagelayer-pen-picker:not(.pagelayer-pen-color-picker) .pagelayer-pen-picker-item:empty:before{
+content: attr(data-value);
+}
+
+.pagelayer-pen-link-tooltip > *{
+margin:0 2px;
+}
+
+.pagelayer-pen-link-tooltip input{
+min-width: 300px;
+font-size: 13px;
+padding: 5px;
+}
+
+.pagelayer-pen-unlink-btn,
+.pagelayer-pen-link-btn{
+padding: 7px;
+cursor: pointer;
+border-radius: 4px;
+font-size: 13px;
+}
+
+/* End Dropdown picker*/
+/* Start HTML viewer*/
+.pagelayer-pen-html-viewer{
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+display: none;
+background: #0000009c;
+z-index:999999;
+}
+
+.pagelayer-pen-html-viewer .pagelayer-pen-html-holder{
+width: 90%;
+height: 80vh;
+margin: auto;
+top: 50%;
+position: relative;
+transform: translateY(-50%);
+background: #fff;
+box-shadow: 0px 0px 7px 0px #fff;
+}
+
+.pagelayer-pen-html-viewer .pagelayer-pen-html-area{
+resize: none;
+width: 100%;
+height: calc(100% - 50px);
+border-radius: 0;
+padding: 10px;
+font-family: courier, courier new, serif;
+line-height: 1.5;
+}
+
+.pagelayer-pen-html-viewer .pagelayer-pen-html-btn{
+height: 40px;
+text-align: center;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.pagelayer-pen-html-viewer .pagelayer-pen-html-btn button{
+margin-right: 10px;
+padding: 7px 20px !important;
+font-size: 15px !important;
+}
+
+.pagelayer-pen-html-viewer .pagelayer-pen-html-area:focus{
+border:none;
+outline:none;
+}
+
+/* End HTML viewer*/
+.pagelayer-pen-toolbar .pagelayer-pen-close{
+background: #e6e6e6;
+position: absolute;
+top: 0;
+right: 0;
+width: auto;
+height: auto;
+border-radius: 0;
+}
+
+.pagelayer-pen-toolbar .pagelayer-pen-close .fas{
+font-size: 10px !important;
+color: #fb0101;
+margin:0;
+padding:0;
+}
+
+.pagelayer-pen-toolbar svg{
+width:18px;
+float:left;
+}
+
+.pagelayer-pen-stroke{
+fill: none;
+stroke: #444;
+stroke-linecap: round;
+stroke-linejoin: round;
+stroke-width: 2;
+}
+
+.pagelayer-pen-active,
+.pagelayer-pen-toolbar button:hover,
+.pagelayer-pen-picker-label:hover,
+.pagelayer-pen-picker-item:hover,
+.pagelayer-pen-active .fas,
+.pagelayer-pen-toolbar button:hover .fas,
+.pagelayer-pen-picker-label:hover .fas,
+.pagelayer-pen-picker-item:hover .fas{
+color: #06c;
+}
+
+.pagelayer-pen-active .pagelayer-pen-fill,
+.pagelayer-pen-toolbar button:hover .pagelayer-pen-fill,
+.pagelayer-pen-picker-label:hover .pagelayer-pen-fill,
+.pagelayer-pen-picker-item:hover .pagelayer-pen-fill{
+fill: #06c;
+}
+
+.pagelayer-pen-active .pagelayer-pen-stroke,
+.pagelayer-pen-toolbar button:hover .pagelayer-pen-stroke,
+.pagelayer-pen-picker-label:hover .pagelayer-pen-stroke,
+.pagelayer-pen-picker-item:hover .pagelayer-pen-stroke{
+stroke: #06c;
+}
+
+.pagelayer-pen-custom-input{
+display: block;
+width: 100%;
+min-width: 75px;
+height: 25px;
+margin-top: 5px;
+margin-bottom: 5px;
+font-size: 12px !important;
+}
+
+.pagelayer-pen-formating .pagelayer-pen-picker-item[data-value="h1"]:before{
+content: "Heading 1" !important;
+font-size: 2em;
+}
+
+.pagelayer-pen-formating .pagelayer-pen-picker-item[data-value="h2"]:before{
+content: "Heading 2" !important;
+font-size: 1.5em;
+}
+
+.pagelayer-pen-formating .pagelayer-pen-picker-item[data-value="h3"]:before{
+content: "Heading 3" !important;
+font-size: 1em;
+}
+
+.pagelayer-pen-formating .pagelayer-pen-picker-item[data-value="h4"]:before{
+content: "Heading 4" !important;
+}
+
+.pagelayer-pen-formating .pagelayer-pen-picker-item[data-value="h5"]:before{
+content: "Heading 5" !important;
+font-size: 0.83em;
+}
+
+.pagelayer-pen-formating .pagelayer-pen-picker-item[data-value="h6"]:before{
+content: "Heading 6"  !important;
+font-size: 0.67em;
+}
+
+.pagelayer-pen-formating .pagelayer-pen-picker-item[data-value="p"]:before{
+content: "Paragraph"  !important;
+}
+
+.pagelayer-pen-formating .pagelayer-pen-picker-item[data-value="blockquote"]:before{
+content: "Blockquote" !important;
+}

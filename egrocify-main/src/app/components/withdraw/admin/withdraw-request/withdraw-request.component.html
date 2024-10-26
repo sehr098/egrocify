@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-between align-items-center w-100 mb-3">
+  <h2 class="card-header mb-0">Withdraw List</h2>
+</div>
+<div class="card mb-4">
+  <div class="card-body">
+    <div class="row g-3">
+
+      <div class="col-md-4 col-6 border-right-custom">
+        <div class="d-flex align-items-center justify-content-between">
+          <h3 class="mb-0">245k</h3>
+          <div class="avatar">
+            <div class="avatar-initial bg-primary rounded shadow">
+              <i class="mdi mdi-trending-up mdi-24px"></i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="fs-big mb-1">Sales</div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-6 border-right-custom">
+        <div class="d-flex align-items-center justify-content-between">
+         <h3 class="mb-0">12.5k</h3>
+          <div class="avatar">
+            <div class="avatar-initial bg-success rounded shadow">
+              <i class="mdi mdi-account-outline mdi-24px"></i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="fs-big mb-1">Customers</div>
+        </div>
+      </div>
+
+      <div class="col-md-4 col-6 border-right-custom">
+        <div class="d-flex align-items-center justify-content-between">
+         <h3 class="mb-0">1.54k</h3>
+          <div class="avatar">
+            <div class="avatar-initial bg-warning rounded shadow">
+              <i class="mdi mdi-cellphone-link mdi-24px"></i>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="fs-big mb-1">Product</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<app-shared-table
+  [data]="companyData"
+  [columns]="columns"
+  [actions]="actions"
+></app-shared-table>

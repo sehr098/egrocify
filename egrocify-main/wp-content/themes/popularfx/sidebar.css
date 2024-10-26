@@ -1,0 +1,517 @@
+/*!
+Sidebar for templates
+*/
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+.widget select {
+	max-width: 100%;
+}
+
+.widget ul {
+    list-style: disc;
+}
+
+.widget-area{
+	display:inline-block;
+	background-color:#ffffff;
+	padding:25px;
+	margin-top:30px;
+	border: 1px solid #eaeaea;
+	box-shadow: 0px 5px 30px 0 #0000001a;
+}
+
+.widget-title{
+	font-size:20px;
+	font-weight: 500;
+	text-decoration: none;
+	color: #4d4d4d;	
+	margin: 8px 0px;
+}
+
+.widget ul,
+.widget ol{
+	margin: 0 0 1.5em 2em;
+}
+
+.widget li a{
+	text-decoration:none;
+	color:#212121;
+	font-size:14px;
+	line-height:1.8;
+}
+
+.widget li a:hover{
+	color:#2196f3;
+}
+
+.widget_calendar table,
+.widget_calendar td,
+.widget_calendar th {
+    padding: 0;
+    text-align: center;
+	border-spacing:0;
+}
+
+.widget_calendar td {
+    border-right: none;
+    border-left: none;
+}
+
+.widget_calendar .widget-title{
+	text-transform:capitalize;
+}
+
+.widget_calendar .wp-calendar-table caption{
+	margin:10px 0px;
+}
+
+.widget_calendar .wp-calendar-table tr td{
+	text-decoration:none;
+	border-bottom:1px solid #e0e0e0;
+	padding:5px;
+}
+
+.widget_calendar .wp-calendar-table tr th{
+	text-decoration:none;
+	border-top:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+	padding:5px;
+}
+
+.widget_calendar .wp-calendar-table td a{
+	text-decoration:none;
+}
+
+.widget input.search-field{
+	border: 1px solid #eaeaea;
+	width: 100%;
+	font-size: 16px;
+	padding: 8px;
+	color: #666;
+	border-radius: 3px;
+	line-height: 1.5;
+	margin: 0;
+}
+
+.widget input.search-submit{
+	background-color: #2196f3;
+	color: #fff;
+	font-weight: 500;
+	padding: 14px 13px;
+	vertical-align: middle;	
+	border:none;
+	margin-top:5px;
+	cursor: pointer;
+	border-radius: 3px;
+	font-size: 0.75rem;
+	line-height: 1;
+}
+
+
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 0.875rem;
+	font-weight: 700;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+
+/* Do not show the outline on the skip link target. */
+#primary[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	float: left;
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.alignright {
+	float: right;
+	margin-left: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1.5em;
+}
+
+.widget_recent_entries .widgettitle,
+.widget_categories .widgettitle,
+.widget_archive .widgettitle{
+	font-size: 22px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #4d4d4d;
+    margin: 8px 0px;
+}
+
+.widget_archive select{
+    max-width: 100%;
+    width: 200px;
+    border-radius: 4px;
+    padding: 5px 10px;
+    height: 40px;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+
+/* Hide the Posts Navigation and the Footer when Infinite Scroll is in use. */
+.infinite-scroll .posts-navigation,
+.infinite-scroll.neverending .site-footer {
+	display: none;
+}
+
+/* Re-display the Theme Footer when Infinite Scroll has reached its end. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Woocoomerce
+--------------------------------------------------------------*/
+.woocommerce-MyAccount-navigation ul{
+	list-style-type:none;
+	margin:0px;
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link{
+	padding: 10px 20px;
+    border-bottom: 1px solid #616161;
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link a{
+	color:#000000;
+	text-decoration:none;
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link.is-active{
+	background-color:#2196f3;
+}
+
+.woocommerce-MyAccount-navigation ul li.woocommerce-MyAccount-navigation-link.is-active a{
+	color:#ffffff;
+}
+
+.woocommerce-account .woocommerce-MyAccount-content{
+	padding:30px;
+}
+
+.woocommerce-Address-title h3{
+	font-weight:600;
+	text-transform:Capitalize;
+}
+
+.woocommerce-account .addresses .title .edit{
+	text-decoration:none;
+}
+
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+
+.comments-area {
+	margin: 0 7.6923% 3.5em;
+	background-color:#ffffff;
+	padding:20px 40px;
+}
+
+.comment-list + .comment-respond,
+.comment-navigation + .comment-respond {
+	padding-top: 1.75em;
+}
+
+.comments-title,
+.comment-reply-title {
+	font-size: 23px;
+	font-size: 1.4375rem;
+	font-weight: 500;
+	line-height: 1.3125;
+}
+
+.comments-title {
+	margin-bottom: 1.217391304em;
+}
+
+.comment-list {
+	list-style: none;
+	margin: 0;
+	padding:0;
+}
+
+.comment-list article,
+.comment-list .pingback,
+.comment-list .trackback {
+	border-top: 1px solid #212121;
+	padding: 1.75em 0;
+}
+
+.comment-list .children {
+	list-style: none;
+	margin: 0;
+}
+
+.comment-list .children > li {
+	padding-left: 0.875em;
+}
+
+.comment-author {
+	color: #1a1a1a;
+}
+
+.vcard .fn a{
+	color:#171717;
+	text-transform:capitalize;
+	font-size: 18px;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.comment-author .avatar {
+	float: left;
+	height: 40px;
+	margin-right: 0.875em;
+	position: relative;
+	width: 40px;
+}
+
+
+.comment-metadata {
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 1.6153846154;
+}
+
+.comment-metadata {
+	margin-bottom: 10px;
+	display:inline-block;
+}
+
+.comment-metadata a:hover,
+.comment-metadata a:focus {
+	
+}
+
+.comment-metadata .edit-link {
+	display: inline-block;
+}
+
+.comment-metadata .edit-link:before {
+	content: "\002f";
+	display: inline-block;
+	opacity: 0.7;
+	padding: 0 0.538461538em;
+}
+
+.comment-content{
+	font-size:16px;
+	font-weight:100;
+	line-height:1.8;
+}
+
+.comment-content ul,
+.comment-content ol {
+	margin: 0 0 1.5em 1.25em;
+}
+
+.comment-content li > ul,
+.comment-content li > ol {
+	margin-bottom: 0;
+}
+
+.comment-reply-link {
+	border-radius: 2px;
+	color: #ffffff;
+	background-color:#2196f3;
+	display: inline-block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 1;
+	padding: 10px 20px;
+	text-decoration:none;
+	border: unset;
+}
+
+.comment-reply-link:hover,
+.comment-reply-link:focus {
+	border-color: currentColor;
+	color: #ffffff;
+	outline: 0;
+}
+
+.comment-form {
+	/*padding-top: 1.75em;*/
+}
+
+.comment-form label {
+	display: block;
+	font-size: 13px;
+	font-size: 0.8125rem;
+	letter-spacing: 0.076923077em;
+	line-height: 1.6153846154;
+	margin-bottom: 0.5384615385em;
+	text-transform: uppercase;
+}
+
+.comment-list .comment-form {
+	padding-bottom: 1.75em;
+}
+
+.comment-notes,
+.comment-awaiting-moderation{
+	font-size: 13px;
+	font-size: 0.8125rem;
+	line-height: 1.6153846154;
+	margin-bottom: 2.1538461538em;
+}
+
+.no-comments {
+	border-top: 1px solid #d1d1d1;
+	font-weight: 700;
+	margin: 0;
+	padding-top: 1.75em;
+}
+
+.comment-navigation + .no-comments {
+	border-top: 0;
+	padding-top: 0;
+}
+
+.comment-reply-title small {
+	font-size: 100%;
+}
+
+.comment-reply-title small a {
+	border: 0;
+	height: 40px;
+	font-size: 14px;
+	overflow: hidden;
+	width: 90px;
+	margin-left: 10px;
+	text-decoration:none;
+	font-weight:400;
+}
+
+.comment-reply-title small a:hover,
+.comment-reply-title small a:focus {
+	
+}
+
+.comment-form-comment{
+	margin-bottom: 1.5em;
+}
+
+.comment-form-comment textarea{
+	background-color:#f5f5f5;
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 3px;
+	width: 100%;
+}
+
+.bypostauthor{
+	display: block;
+}
+
+.says{
+	display:none;
+}
+
+.comment-respond a,
+.comment-metadata a{	
+	text-decoration:none;
+	color: #4169e1;
+}
+
+.comment-respond .form-submit .submit{
+	background-color: #2196f3;
+	color: #fff;
+	font-weight: 500;
+	padding: 8px 13px;
+	border: none;
+	border-radius: 3px;
+}
+
+/* Image Navigation */
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+@media all and (max-width:768px){	
+
+	main, .pagelayer-content{
+		width: 100% !important;
+	}
+	.widget-area{
+		width:50%;
+		float:none;
+		margin:30px;
+		display:block;
+	}
+	
+}
+
+@media all and (max-width:599px){	
+	
+	main, .pagelayer-content{
+		width: 100% !important;
+	}
+	
+	.widget-area{
+		width:auto !important;	
+		float:none;
+		margin:15px;
+		display:block;
+	}
+}
+
+/* SitePad Posts CSS End */

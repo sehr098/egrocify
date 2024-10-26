@@ -1,0 +1,5 @@
+[02-Jun-2024 23:19:44 UTC] PHP Warning:  Undefined array key "dbname" in /home/bestamzd/seller.egrocify.com/wordpress/wp-admin/setup-config.php on line 282
+[02-Jun-2024 23:19:44 UTC] PHP Warning:  Undefined array key "uname" in /home/bestamzd/seller.egrocify.com/wordpress/wp-admin/setup-config.php on line 283
+[02-Jun-2024 23:19:44 UTC] PHP Warning:  Undefined array key "pwd" in /home/bestamzd/seller.egrocify.com/wordpress/wp-admin/setup-config.php on line 284
+[02-Jun-2024 23:19:44 UTC] PHP Warning:  Undefined array key "dbhost" in /home/bestamzd/seller.egrocify.com/wordpress/wp-admin/setup-config.php on line 285
+[02-Jun-2024 23:19:44 UTC] PHP Warning:  Undefined array key "prefix" in /home/bestamzd/seller.egrocify.com/wordpress/wp-admin/setup-config.php on line 286

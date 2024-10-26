@@ -1,0 +1,55 @@
+<div class="d-flex justify-content-between align-items-center w-100 mb-3">
+  <h2 class="card-header mb-0">Referrals List</h2>
+</div>
+
+<div class="row mb-4 g-6">
+  <div class="col-lg-7">
+    <div class="card h-100">
+      <div class="card-body">
+        <p class="mb-6 card-subtitle mt-0">How to earn referral award</p>
+        <div class="d-flex flex-column flex-sm-row justify-content-between text-center gap-6">
+          <div class="d-flex flex-column align-items-center">
+            <span class="p-3 border-1 border-primary rounded-circle border-dashed mb-0 w-px-75 h-px-75"><img src="../../../assets/img/rocket.svg" alt="Rocket"></span>
+            <p class="my-2 w-75">copy or share your referral link to your friend</p>
+            <h4 class="text-primary mb-0">Q0098656757</h4>
+          </div>
+          <div class="d-flex flex-column align-items-center">
+            <span class="p-3 border-1 border-primary rounded-circle border-dashed mb-0 w-px-75 h-px-75"><img src="../../../assets/img/user-info.svg" alt="Rocket"></span>
+            <p class="my-2 w-75">For every new signup you get</p>
+            <h4 class="text-primary mb-0">10%</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-5">
+    <div class="card h-100">
+      <div class="card-body">
+        <form class="referral-form" onsubmit="return false">
+          <div class="pt-4">
+            <h5 class="mb-1">Share the referral link</h5>
+            <h5>copy & share your referral link to your friend</h5>
+            <div class="d-flex g-2">
+              <div class="w-100">
+                <div class="me-3">
+                  <input type="text" id="referralLink" name="referralLink" class="form-control form-control-sm" placeholder="pixinvent.com/?ref=6479">
+                  <img src="../../../assets/img/rocket.svg" alt="Rocket" class="custom-border">
+                  <img src="../../../assets/img/rocket.svg" alt="Rocket" class="custom-border">
+                </div>
+              </div>
+              <div>
+                <div class="d-flex gap-2">
+                  <button type="button" class="btn btn-facebook btn-icon waves-effect waves-light"><i class="ri-facebook-circle-line text-white ri-22px"></i></button>
+                  <button type="button" class="btn btn-twitter btn-icon waves-effect waves-light"><i class="ri-twitter-line text-white ri-22px"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-shared-table [data]="companyData" [columns]="columns" [actions]="actions"></app-shared-table>

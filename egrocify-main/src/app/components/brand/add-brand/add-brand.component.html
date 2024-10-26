@@ -1,0 +1,49 @@
+<div class="d-flex justify-content-between align-items-center w-100 mb-3">
+  <h2 class="card-header mb-0">Add a new Brand</h2>
+  <div >
+    <button type="button" class="btn btn-secondary waves-effect waves-light mr-10">
+      Secondary
+    </button>
+    <button type="button" class="btn btn-success waves-effect waves-light">Success</button>
+  </div>
+</div>
+<div class="card">
+  <h2 class="card-header mb-0">Brand Information</h2>
+  <div class="card-body">
+    <div class="row">
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="formFile" class="form-label"
+            >Name</label
+          >
+          <input class="form-control" type="text" id="formFile" />
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="defaultSelect" class="form-label">Company</label>
+          <select id="defaultSelect" class="form-select">
+            <option>Default select</option>
+            <option value="1">One</option>
+            <option value="2">Two</option>
+            <option value="3">Three</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="mb-3">
+          <label for="formFile" class="form-label"
+            >Logo (Optional)</label
+          >
+          <input class="form-control" type="file" id="formFile" />
+        </div>
+      </div>
+      <div class="col-6">
+        <label for="formFile" class="form-label"
+        >Description (Optional)</label
+      >
+        <p-editor [style]="{ height: '320px' }" />
+      </div>
+    </div>
+  </div>
+</div>
