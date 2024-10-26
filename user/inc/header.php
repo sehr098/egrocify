@@ -175,7 +175,7 @@ $created_at = $subscription_user['created_at'];
        <div class="alert alert-warning top-bar-freetrial" role="alert">
         <b>LIMIT EXCEEDED: </b>  Your subscription has been expired, <a href="https://seller.egrocify.com/user/my_subscription.php" style="text-decoration:underline" class="cursor-pointer" target="_blank">Click here</a> to renew..!
         </div>
-        <? } 
+        <?php } 
     }
         
         ?>
