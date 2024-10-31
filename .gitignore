@@ -1,2 +1,5 @@
 admin/error_log
 html_laravel.zip
+
+.env
+vendor/
